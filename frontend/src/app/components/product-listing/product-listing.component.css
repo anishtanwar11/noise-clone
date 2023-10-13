@@ -1,0 +1,115 @@
+.Collections{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.header{
+    width: 100%;
+    height: 4.5rem;
+    background: #000;
+}
+/* .Container{
+    margin-top: 4.5rem;
+} */
+.Container h1{
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+    border-left: 1px solid rgba(0,0,0,0.2);
+    border-right: 1px solid rgba(0,0,0,0.2);
+    font-size: 3rem;
+    font-weight: 700;
+    padding:25px;
+    margin: 0;
+}
+.product__list{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+.product__card{
+    border: 1px solid rgba(0,0,0,0.2);
+    background-color: rgb(244, 244, 244);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+.product__image{
+    padding: 100px 0;
+}
+.product__image img{
+    width: 350px;
+}
+
+.product__details{
+    
+    background: #fff;
+    width: 100%;
+}
+.product__name{
+    padding: 25px;
+    border-top: 1px solid rgba(0,0,0,0.2);
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+}
+.product__price{
+    padding: 25px;
+}
+.product__name h2{
+    font-size: 2.2rem;
+    font-weight: 700;
+}
+.product__name p{
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: 500;
+    
+}
+.product__price{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.product__price p{
+    margin: 0 10px 0 0;
+}
+.product__price div{
+    display: flex;
+    align-items: center;
+}
+.price{
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #000;
+    list-style: none;
+    /* margin-right: 10px; */
+}
+.dic__price{
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: rgba(0,0,0,0.3);
+    list-style: none;
+    /* margin-right: 10px; */
+}
+.discount{
+    background: #f4e4dd;
+    color: #e05608;;
+    padding: 5px 20px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 500;
+    /* margin-right: 15px; */
+}
+button{
+    margin: 0;
+    background: #000;
+    padding: 8px 15px;
+    font-size: .9rem;
+    font-weight: 600;
+    color: #fff;
+    border-radius: 20px;
+    letter-spacing: 1px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    margin-left: 15px;
+}

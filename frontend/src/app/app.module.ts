@@ -7,13 +7,19 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { HomeComponent } from './components/home/home.component';
+import { ProductListingComponent } from './components/product-listing/product-listing.component';
+import { ProductDetailComponent } from './components/product-detail/product-detail.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    HomeComponent,
+    ProductListingComponent,
+    ProductDetailComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,31 @@
+<section class="Collections">
+    <div class="header"></div>
+    <div class="Container">
+        <h1>List of {{ category }}</h1>
+        <div class="product__list">
+            <div *ngFor="let productList of products" class="product__card">
+                <a [routerLink]="['/collections', category, 'product', productList.id]">
+                    <div class="product__image">
+                        <img src="{{ productList.imgUrl }}" alt="Product img">
+                    </div>
+                </a>
+                <div class="product__details">
+                    <div class="product__name">
+                        <h2>{{ productList.name }}</h2>
+                        <p>{{ productList.description }}</p>
+                    </div>
+                    <div class="product__price">
+                        <div>
+                            <p class="price">₹{{ productList.price }}</p>
+                            <p class="dic__price"><s>₹{{ productList.dicPrice }}</s></p>
+                            <p class="discount">{{ productList.discount }}% OFF</p>
+                        </div>
+                        <button [routerLink]="['/collections', category, 'product', productList.id]">VIEW
+                            PRODUCT
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

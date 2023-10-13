@@ -25,36 +25,4 @@
         </div>
     </div>
 
-
-    <ngb-carousel *ngIf="images" [showNavigationArrows]="showNavigationArrows"
-        [showNavigationIndicators]="showNavigationIndicators">
-
-        <ng-template ngbSlide *ngFor="let image of images">
-            <div class="picsum-img-wrapper">
-                <img src="{{ image.img }}" alt="Random slide" />
-            </div>
-            <div class="Banner_text">
-                <p>{{ image.name }}</p>
-                <h2>{{ image.title }}</h2>
-                <h4>{{ image.subTitle }}</h4>
-                <ul class="price_button">
-                    <li class="Price">{{ image.price }}</li>
-                    <li><s>{{ image.discPrice }}</s></li>
-                </ul>
-            </div>
-        </ng-template>
-    </ngb-carousel>
-
-    <hr />
-
-    <div class="btn-group" role="group" aria-label="Carousel toggle controls">
-        <button type="button" (click)="showNavigationArrows = !showNavigationArrows"
-            class="btn btn-outline-dark btn-sm">
-            Toggle navigation arrows
-        </button>
-        <button type="button" (click)="showNavigationIndicators = !showNavigationIndicators"
-            class="btn btn-outline-dark btn-sm">
-            Toggle navigation indicators
-        </button>
-    </div>
 </section>

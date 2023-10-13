@@ -1,1 +1,31 @@
-<p>footer works!</p>
+<section class="Footer">
+    <div class="footer__container Container">
+        <div class="top__footer">
+            <div class="footer__box">
+                <div class="logo__blob">
+                    <h3>noise</h3>
+                </div>
+                <div class="social__links">
+                    <h2>Follow Us</h2>
+                    <ul>
+                        <li><i class="ri-facebook-fill"></i></li>
+                        <li><i class="ri-instagram-line"></i></li>
+                        <li><i class="ri-youtube-fill"></i></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__box right">
+                <h2>Our Products</h2>
+                <ul class="category__links">
+                    <li *ngFor="let category of categories">
+                        <p [routerLink]="['/collections', category.name]">{{category.name}}</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="bottom__footer">
+            <p>Copyright © 2023, Designed By anishtanwar</p>
+        </div>
+    </div>
+</section>
