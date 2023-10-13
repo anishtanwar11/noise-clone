@@ -34,6 +34,7 @@ export const sample_products: Product[] = [
         price: 1999,
         dicPrice: 3499,
         discount: 71,
+        colorName: 'Jet Black',
         imgUrl: '//www.gonoise.com/cdn/shop/files/1.2_a7f4d9ff-b6bd-4717-9aeb-412a303fdfb1.png?v=1695119844',
     },
     {
@@ -44,6 +45,7 @@ export const sample_products: Product[] = [
         price: 1299,
         dicPrice: 4999,
         discount: 74,
+        colorName: 'Jet Black',
         imgUrl: '//www.gonoise.com/cdn/shop/files/1.4_b091930e-8347-4d5a-967d-f1056cf66a5e.png?v=1691043368',
     },    
 
@@ -55,6 +57,7 @@ export const sample_products: Product[] = [
         price: 1299,
         dicPrice: 3499,
         discount: 62,
+        colorName: 'Jet Black',
         imgUrl: '//www.gonoise.com/cdn/shop/files/1_95328d40-a938-44fa-8b63-75eaa900801d.png?v=1686195918',
     },
 
@@ -66,6 +69,7 @@ export const sample_products: Product[] = [
         price: 1199,
         dicPrice: 3999,
         discount: 70,
+        colorName: 'Jet Black',
         imgUrl: '//www.gonoise.com/cdn/shop/files/3_1b563deb-0f7a-4d72-b8f2-84b1f1723897.png?v=1687236070',
     },
 
@@ -78,6 +82,7 @@ export const sample_products: Product[] = [
         price: 1299,
         dicPrice: 5999,
         discount: 78,
+        colorName: 'Jet Black',
         imgUrl: '//www.gonoise.com/cdn/shop/files/50.png?v=1690783293',
     },
 
@@ -89,6 +94,7 @@ export const sample_products: Product[] = [
         price: 999,
         dicPrice: 3499,
         discount: 71,
+        colorName: 'Jet Black',
         imgUrl: '//www.gonoise.com/cdn/shop/files/1.2_a7f4d9ff-b6bd-4717-9aeb-412a303fdfb1.png?v=1695119844',
     },
 
@@ -100,6 +106,7 @@ export const sample_products: Product[] = [
         price: 1375,
         dicPrice: 5999,
         discount: 77,
+        colorName: 'Jet Black',
         imgUrl: '//www.gonoise.com/cdn/shop/files/Artboard3_19.png?v=1686315408',
     },
 
@@ -111,6 +118,7 @@ export const sample_products: Product[] = [
         price: 1999,
         dicPrice: 6999,
         discount: 66,
+        colorName: 'Jet Black',
         imgUrl: '//www.gonoise.com/cdn/shop/files/1.2_fa2cac90-769e-491e-8be2-843e7b4a4441.png?v=1695388527',
     },
 
@@ -123,6 +131,7 @@ export const sample_products: Product[] = [
         price: 1299,
         dicPrice: 599,
         discount: 78,
+        colorName: 'Jet Black',
         imgUrl: '//www.gonoise.com/cdn/shop/files/50.png?v=1690783293',
     },
     {
@@ -133,6 +142,7 @@ export const sample_products: Product[] = [
         price: 1799,
         dicPrice: 6999,
         discount: 74,
+        colorName: 'Jet Black',
         imgUrl: '//www.gonoise.com/cdn/shop/files/Mighty-PDP-Black-0-removebg-preview_e5628392-f2ac-4655-ac2d-7b363f621821.png?v=1688729969',
     },
     {
@@ -143,6 +153,7 @@ export const sample_products: Product[] = [
         price: 2499,
         dicPrice: 7999,
         discount: 68,
+        colorName: 'Jet Black',
         imgUrl: '//www.gonoise.com/cdn/shop/files/1_1_b18f77db-5fef-4698-9902-a48fec2b8efa.png?v=1692267270',
     },
     {
@@ -153,6 +164,7 @@ export const sample_products: Product[] = [
         price: 2499,
         dicPrice: 7999,
         discount: 68,
+        colorName: 'Jet Black',
         imgUrl: '//www.gonoise.com/cdn/shop/files/1_77e673f8-14be-4be8-8680-9b1dd1e706e0.png?v=1682823529',
     },
 
@@ -165,6 +177,7 @@ export const sample_products: Product[] = [
         price: 1499,
         dicPrice: 2999,
         discount: 50,
+        colorName: 'Jet Black',
         imgUrl: '//www.gonoise.com/cdn/shop/products/1.2_a32ebbb0-e601-46b4-8d6e-74f11726c286.png?v=1659442751',
     },
     {
@@ -175,6 +188,7 @@ export const sample_products: Product[] = [
         price: 1999,
         dicPrice: 3999,
         discount: 50,
+        colorName: 'Jet Black',
         imgUrl: '//www.gonoise.com/cdn/shop/products/8.1127_7d8d173b-6913-4354-9d83-8254263ce900.png?v=1660893516',
     },
 
@@ -187,6 +201,7 @@ export const sample_products: Product[] = [
         price: 2499,
         dicPrice: 7999,
         discount: 68,
+        colorName: 'Jet Black',
         imgUrl: '//www.gonoise.com/cdn/shop/files/NoiseColorFitUltra3-TealBlue_1.png?v=1695122152',
     },
     {
@@ -197,6 +212,7 @@ export const sample_products: Product[] = [
         price: 2499,
         dicPrice: 7999,
         discount: 68,
+        colorName: 'Jet Black',
         imgUrl: '//www.gonoise.com/cdn/shop/files/1_77e673f8-14be-4be8-8680-9b1dd1e706e0.png?v=1682823529',
     },
     {
@@ -207,6 +223,7 @@ export const sample_products: Product[] = [
         price: 2199,
         dicPrice: 7999,
         discount: 72,
+        colorName: 'Jet Black',
         imgUrl: '//www.gonoise.com/cdn/shop/products/1_8b810946-adcb-4a40-b460-e967ee2fbe47.png?v=1686911647',
     },
 
@@ -218,6 +235,7 @@ export const sample_products: Product[] = [
         price: 2799,
         dicPrice: 6999,
         discount: 60,
+        colorName: 'Jet Black',
         imgUrl: '//www.gonoise.com/cdn/shop/products/4_2.png?v=1676439601',
     },
 

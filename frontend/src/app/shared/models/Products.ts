@@ -7,4 +7,5 @@ export class Product {
     dicPrice!: number;
     discount!: number;
     imgUrl!: string;
+    colorName!: string;
 }

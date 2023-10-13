@@ -1,7 +1,61 @@
 <section class="product_details">
-    <div class="Container">
-        <div *ngIf="product">
-            <img src="{{product.imgUrl}}" alt="">
+    <div class="header"></div>
+        <div *ngIf="product" class="product__details-box">
+            <div class="product__image">
+                <img src="{{product.imgUrl}}" alt="">
+            </div>
+            <div class="right__box">
+                <div class="product__details">
+                    <h1>{{ product.name }}</h1>
+                    <div>
+                        <div class="flex product__price">
+                            <p class="price">₹{{ product.price }}</p>
+                            <p class="dicPrice"><s>₹{{ product.dicPrice }}</s></p>
+                        </div>
+                        <p class="taxes">Inclusive of all taxes</p>
+                    </div>
+                    <h2 class="discount">Super saver deal &nbsp; <span>{{ product.discount }}% OFF</span></h2>
+                </div>
+                <div class="color__options">
+                    <p class="title">Colour <span>{{product.colorName}}</span></p>
+                    <div class="color__img">
+                        <ul class="flex">
+                            <li class="active">
+                                <img src="//www.gonoise.com/cdn/shop/products/4_2.png?v=1676439601" alt="">
+                            </li>
+                            <li>
+                                <img src="//www.gonoise.com/cdn/shop/products/1.2_a32ebbb0-e601-46b4-8d6e-74f11726c286.png?v=1659442751" alt="">
+                            </li>
+                            <li>
+                                <img src="//www.gonoise.com/cdn/shop/products/8.1127_7d8d173b-6913-4354-9d83-8254263ce900.png?v=1660893516" alt="">
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="button">
+                        <button>Buy Now</button>
+                    </div>
+                </div>
+                <div class="product__guarantees">
+                    <p class="title">Our Guarantees</p>
+                    <ul class="flex">
+                        <li>
+                            <img src="//www.gonoise.com/cdn/shop/files/rupee_square_5ee889ca-710c-4b9d-baae-16adab9d84d4.svg?v=1684401789" alt="">
+                            <p>7 day<br> replacment</p>
+                        </li>
+                        <li>
+                            <img src="//www.gonoise.com/cdn/shop/files/Document_verified_-_1_398219e2-8134-4693-a498-58635f9c03d7.svg?v=1684401789" alt="">
+                            <p>1 year<br> warranty</p>
+                        </li>
+                        <li>
+                            <img src="//www.gonoise.com/cdn/shop/files/Truck_2_1_4a3551bc-f7c6-44f4-84b5-0c340fa242f9.svg?v=1684401789" alt="">
+                            <p>Free<br> shipping</p>
+                        </li>
+                        <li>
+                            <img src="//www.gonoise.com/cdn/shop/files/Shield_Done_04409ec8-3d1b-414b-96f8-7d2211b7f52f.svg?v=1684401789" alt="">
+                            <p>Secure<br> payment</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </div>
-    </div>
-</section>>
+</section>
