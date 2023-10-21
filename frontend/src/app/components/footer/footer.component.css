@@ -3,7 +3,9 @@
     justify-content: center;
     align-items: center;
 }
-
+.two{
+    display: none;
+}
 .footer__container{
     display: flex;
     flex-direction: column;
@@ -24,13 +26,13 @@
 }
 
 .footer__box .logo__blob h3{
-    font-size: 2.2rem;
+    font-size: 2rem;
     font-weight: bolder;
     color: #000;
     letter-spacing: 1px;
 }
 h2{
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-weight: 700;
     color: #000;
     margin-top: 2rem;
@@ -44,11 +46,12 @@ ul{
     margin-top: 1.5rem;
 }
 .social__links ul li{
-    width: 40px;
-    height: 40px;
+    width: 35px;
+    height: 35px;
     border-radius: 50%;
-    display: grid;
-    place-items: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border: 2px solid black;
     cursor: pointer;
     transition: all .3s ease;
@@ -58,16 +61,65 @@ ul{
     color: #fff;
 }
 .social__links li i{
-    font-size: 1.5rem;
+    font-size: 1.4rem;
 }
 
 .footer__box .category__links li{
-    font-size: 1rem;
+    font-size: .9rem;
     font-weight: 500;
     cursor: pointer;
+    color: rgba(0, 0, 0, 0.5);
+    transition: all .3s ease;
+}
+.footer__box .category__links li:hover{
+    color: #000;
+}
+.bottom__footer p{
+    font-size: 1rem;
+    color: #000;
+    font-weight: 600;
 }
 
-.bottom__footer p{
-    font-size: 1.2rem;
-    color: #000;
+@media (max-width:1200px) {
+    h2{
+        font-size: 1rem;
+    }
+    .social__links ul li{
+        width: 30px;
+        height: 30px;
+    }
+    .social__links li i{
+        font-size: 1.3rem;
+    }
+    .footer__box .category__links li{
+        font-size: .9rem;
+        font-weight: 400;
+        cursor: pointer;
+    }
+    .bottom__footer p{
+        font-size: 1rem;
+        color: #000;
+        font-weight: 500;
+    }
+}
+
+
+@media (max-width:970px){
+    .one{
+        display: none;
+    }
+    .two{
+        display: block;
+    }
+    .top__footer{
+        flex-direction: column;
+    }
+    .right{
+        margin-left: 0rem;
+    }
+    
+    .footer__box ul{
+        flex-direction: column;
+    }
+
 }

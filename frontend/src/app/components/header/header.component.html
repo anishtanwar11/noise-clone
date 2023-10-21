@@ -3,10 +3,11 @@
         <div class="Nav Container ">
             <div class="logo">
                 <img src="//www.gonoise.com/cdn/shop/files/Group_4_df1f4045-5a8c-4b00-94bb-a6622f06f7da.png?v=1696847023"
-                    alt="noise">
+                    alt="noise"
+                    [routerLink]="['']">
             </div>
 
-            <div class="Nav__links">
+            <div class="Nav__links window">
                 <ul>
                     <li>Products</li>
                     <li>Gift Store</li>
@@ -15,11 +16,22 @@
                 </ul>
             </div>
 
+            <div class="Nav__links menu" *ngIf="navButton" [@dropDownMenu]>
+                <ul>
+                    <li class="menu-item">Products</li>
+                    <li class="menu-item">Gift Store</li>
+                    <li class="menu-item">Support</li>
+                    <li class="menu-item">Blogs</li>
+                    <li class="log-in menu-item"><i class="ri-login-box-line"></i>&nbsp;Login</li>
+                </ul>
+            </div>
+
             <div class="Nav__links-imp">
                 <ul>
                     <li><i class="ri-search-line"></i></li>
                     <li><i class="ri-shopping-bag-line"></i></li>
                     <li><i class="ri-user-line"></i></li>
+                    <li (click)="toggleButton()"><i class="ri-menu-line"></i></li>
                 </ul>
             </div>
         </div>

@@ -4,7 +4,7 @@
         <h1>List of {{ category }}</h1>
         <div class="product__list">
             <div *ngFor="let productList of products" class="product__card">
-                <a [routerLink]="['/collections', category, 'product', productList.id]">
+                <a [routerLink]="['/product', productList.id]">
                     <div class="product__image">
                         <img src="{{ productList.imgUrl }}" alt="Product img">
                     </div>
@@ -16,12 +16,12 @@
                     </div>
                     <div class="product__price">
                         <div>
-                            <p class="price">₹{{ productList.price }}</p>
+                            <p class="price">₹{{ (productList.dicPrice - ((productList.dicPrice * productList.discount) / 100)).toFixed(0) }}</p>
                             <p class="dic__price"><s>₹{{ productList.dicPrice }}</s></p>
                             <p class="discount">{{ productList.discount }}% OFF</p>
                         </div>
-                        <button [routerLink]="['/collections', category, 'product', productList.id]">VIEW
-                            PRODUCT
+                        <button [routerLink]="['/product', productList.id]">
+                            VIEW PRODUCT
                         </button>
                     </div>
                 </div>

@@ -13,7 +13,7 @@ html {
 
 body {
     width: 100%;
-   
+    height: 100%;
 }
 
 ul li {
@@ -28,3 +28,146 @@ a {
     width: 100%;
     max-width: 1700px;
 }
+
+
+.product__list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.product__card {
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    background-color: rgb(244, 244, 244);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.product__image {
+    padding: 50px 0;
+}
+
+.product__image img {
+    max-width: 240px;
+}
+
+.product__details {
+    background: #fff;
+    width: 100%;
+}
+
+.product__name {
+    padding: 20px;
+    border-top: 1px solid rgba(0, 0, 0, 0.2);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.product__price {
+    padding: 20px;
+}
+
+.product__name h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    width: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.product__name p {
+    margin: 0;
+    font-size: .8rem;
+    font-weight: 500;
+    width: 250px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.product__price {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.product__price p {
+    margin: 0 10px 0 0;
+
+}
+
+.product__price .P {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.dic-discount {
+    display: flex;
+    gap: 10px;
+}
+
+.price {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #000;
+    list-style: none;
+}
+
+.dic__price {
+    font-size: .9rem;
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.3);
+    list-style: none;
+    /* margin-right: 10px; */
+}
+
+.discount {
+    background: #f4e4dd;
+    color: #e05608;
+    ;
+    padding: 5px 20px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 500;
+    /* margin-right: 15px; */
+}
+
+button {
+    margin: 0;
+    background: #000;
+    padding: 8px 15px;
+    font-size: .9rem;
+    font-weight: 600;
+    color: #fff;
+    border-radius: 20px;
+    letter-spacing: 1px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: .3s ease;
+}
+
+button:active {
+    scale: .9;
+}
+
+
+
+
+
+@media screen and (max-width:1700px) {
+    .Container {
+        padding: 0 40px;
+    }
+}
+
+@media screen and (max-width:970px) {
+    .Container {
+        padding: 0 20px;
+    }
+}
+

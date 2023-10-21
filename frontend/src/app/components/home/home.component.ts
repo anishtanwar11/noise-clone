@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductsService } from 'src/app/services/products.service';
 import { Category } from 'src/app/shared/models/Categories';
+import { Product } from 'src/app/shared/models/Products';
 
 @Component({
   selector: 'app-home',
@@ -16,17 +17,19 @@ export class HomeComponent implements OnInit {
   images: any[];
   categories: Category[]=[];
 
+  homeProducts: Product[]=[];
+
   constructor(private productService:ProductsService) { 
 
 
     this.images =[
       {
-      name: 'ColorFit Mighty',
-      title: 'Live big and bold',
-      subTitle: '1.96" display | Advanced calling',
-      img: '/assets/img/slide-1.jpg',
-      price: '$ 1799',
-      discPrice: '$ 6999'
+        name: 'ColorFit Mighty',
+        title: 'Live big and bold',
+        subTitle: '1.96" display | Advanced calling',
+        img: '/assets/img/slide-1.jpg',
+        price: '$ 1799',
+        discPrice: '$ 6999'
       },
       {
         name: 'Buds X Prime',
@@ -52,6 +55,7 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
     this.categories = this.productService.getCategory();
+    this.homeProducts = this.productService.getAllHomeProducts();
   }
 
 }

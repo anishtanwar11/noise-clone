@@ -26,6 +26,7 @@ export const categories: Category[] = [
 ]
 
 export const sample_products: Product[] = [
+    // WIEWLESS EARBUDS
     {
         id: 1,
         category: 'Wireless Earbuds',
@@ -129,7 +130,7 @@ export const sample_products: Product[] = [
         name: 'ColorFit Thrive Smart Watch',
         description: '1.85" HD display | Metallic finish',
         price: 1299,
-        dicPrice: 599,
+        dicPrice: 5999,
         discount: 78,
         colorName: 'Jet Black',
         imgUrl: '//www.gonoise.com/cdn/shop/files/50.png?v=1690783293',
@@ -226,7 +227,6 @@ export const sample_products: Product[] = [
         colorName: 'Jet Black',
         imgUrl: '//www.gonoise.com/cdn/shop/products/1_8b810946-adcb-4a40-b460-e967ee2fbe47.png?v=1686911647',
     },
-
     {
         id: 18,
         category: 'AMOLED screen',
@@ -241,3 +241,49 @@ export const sample_products: Product[] = [
 
 ]
 
+export const sample_home_products: Product[] = [
+    {
+        id: 15,
+        category: 'AMOLED screen',
+        name: 'Ultra 3 AMOLED',
+        description: '1.96" AMOLED',
+        price: 2499,
+        dicPrice: 7999,
+        discount: 68,
+        colorName: 'Jet Black',
+        imgUrl: '//www.gonoise.com/cdn/shop/files/NoiseColorFitUltra3-TealBlue_1.png?v=1695122152',
+    },
+    {
+        id: 16,
+        category: 'AMOLED screen',
+        name: 'Force Plus AMOLED watch',
+        description: '1.46" AMOLED display',
+        price: 2499,
+        dicPrice: 7999,
+        discount: 68,
+        colorName: 'Jet Black',
+        imgUrl: '//www.gonoise.com/cdn/shop/files/1_77e673f8-14be-4be8-8680-9b1dd1e706e0.png?v=1682823529',
+    },
+    {
+        id: 17,
+        category: 'AMOLED screen',
+        name: 'Pro 4 Alpha AMOLED',
+        description: '1.78" AMOLED With Calling',
+        price: 2199,
+        dicPrice: 7999,
+        discount: 72,
+        colorName: 'Jet Black',
+        imgUrl: '//www.gonoise.com/cdn/shop/products/1_8b810946-adcb-4a40-b460-e967ee2fbe47.png?v=1686911647',
+    },
+    {
+        id: 18,
+        category: 'AMOLED screen',
+        name: 'NoiseFit Evolve 3',
+        description: '1.43" Amoled with Calling',
+        price: 2799,
+        dicPrice: 6999,
+        discount: 60,
+        colorName: 'Jet Black',
+        imgUrl: '//www.gonoise.com/cdn/shop/products/4_2.png?v=1676439601',
+    },
+]

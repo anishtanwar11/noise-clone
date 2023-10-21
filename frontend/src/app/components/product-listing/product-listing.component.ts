@@ -12,6 +12,7 @@ export class ProductListingComponent implements OnInit {
 
   category: any ='';
   products: Product[] = [];
+  productList: any;
 
   constructor(private route:ActivatedRoute,
               private productService:ProductsService) { }
@@ -26,6 +27,7 @@ export class ProductListingComponent implements OnInit {
         this.category = 'Collection Not Fount!';
       }
     })
+    
   }
 
 }

@@ -5,7 +5,7 @@
                 <div class="logo__blob">
                     <h3>noise</h3>
                 </div>
-                <div class="social__links">
+                <div class="social__links one">
                     <h2>Follow Us</h2>
                     <ul>
                         <li><i class="ri-facebook-fill"></i></li>
@@ -20,6 +20,15 @@
                     <li *ngFor="let category of categories">
                         <p [routerLink]="['/collections', category.name]">{{category.name}}</p>
                     </li>
+                </ul>
+            </div>
+
+            <div class="social__links two">
+                <h2>Follow Us</h2>
+                <ul>
+                    <li><i class="ri-facebook-fill"></i></li>
+                    <li><i class="ri-instagram-line"></i></li>
+                    <li><i class="ri-youtube-fill"></i></li>
                 </ul>
             </div>
         </div>

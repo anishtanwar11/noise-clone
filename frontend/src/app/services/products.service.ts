@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Product } from '../shared/models/Products';
-import { categories, sample_products } from 'src/data';
+import { categories, sample_home_products, sample_products } from 'src/data';
 import { Category } from '../shared/models/Categories';
 
 @Injectable({
@@ -19,6 +19,11 @@ export class ProductsService {
     return sample_products;
   }
 
+  //FOR GETTING HOME PRODUCTS
+  getAllHomeProducts(): Product[] {
+    return sample_home_products;
+  }
+
   // FOR PRODUCT LIST
   getProductByCategory(categoryName: string) {
     const category = this.getCategory().find(cat => cat.name === categoryName);
@@ -31,6 +36,12 @@ export class ProductsService {
   // FOR PRODUCT DETAILS
   getProductById(id: number) {
     return this.getAll().find(product => product.id === id);
+  }
+
+  //FOR HOME PRODUCTS DETAILS
+  
+  getHomeProductsById(id: number) {
+    return this.getAllHomeProducts().find(product => product.id === id);
   }
 }
 

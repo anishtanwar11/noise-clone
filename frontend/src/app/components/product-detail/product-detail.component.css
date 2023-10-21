@@ -1,154 +1,283 @@
-.header{
+.header {
     width: 100%;
-    height: 4.5rem;
+    height: 3.5rem;
     background: #000;
+    position: fixed;
+    top: 0;
+    left: 0;
 }
-.product__details-box{
+
+.product__details-box {
     display: flex;
     justify-content: space-between
 }
-p{
+
+p {
     margin: 0;
 }
-ul{
+
+ul {
     padding: 0;
 }
-.flex{
+
+.flex {
     display: flex;
 }
-.product__image{
-    width: 60%;
+
+.product__image {
+    width: 58%;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: rgba(0,0,0,0.1);
+    background: rgba(227, 227, 227);
 }
-.right__box{
-    width: 40%;
-    border: 1px solid rgba(0,0,0,0.2);
+
+.product__image img {
+    max-width: 400px;
+}
+
+.right__box {
+    width: 42%;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.product__details {
+    margin-top: 4.2rem;
 }
 
 .product__details,
-.product__guarantees
-{
-    border-bottom: 1px solid rgba(0,0,0,0.2);
-    padding: 30px 25px;
+.product__guarantees {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    padding: 20px 25px;
 }
-.color__options{
-    border-bottom: 1px solid rgba(0,0,0,0.2);
-    padding-top:30px ;
+
+.color__options {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    padding-top: 20px;
 }
-.color__options p{
+
+.color__options p {
     margin-left: 25px;
 }
-.button{
+
+.button {
     padding: 15px 25px;
-    border-top: 1px solid rgba(0,0,0,0.2);
+    border-top: 1px solid rgba(0, 0, 0, 0.2);
 }
-.color__img{
-    padding: 30px 25px;
+
+.color__img {
+    padding: 10px 25px 1px 25px;
 }
-.product__details h1,.price{
-    font-size: 2.2rem;
+
+.product__details h1,
+.Price {
+    font-size: 1.8rem;
     font-weight: 700;
     color: #000;
 }
-.product__price{
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-top: 10px;
+
+.Product__price {
+    padding: 0;
 }
-.price{
-    font-size: 2rem;
+.Price {
+    font-size: 1.8rem;
+    margin-right: 10px
 }
-.dicPrice{
+
+.DicPrice {
     font-size: 1.5rem;
     font-weight: 600;
-    color: rgba(0,0,0,0.3);
+    color: rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-.taxes{
-    font-size: 1rem;
+
+.taxes {
+    font-size: .8rem;
     font-weight: 400;
     color: #000;
     margin-top: 5px;
 }
-.discount{
+
+.discount {
     background: rgb(34, 209, 67);
-    color: #fff;
+    color: rgb(225, 225, 225);
     border-radius: 10px;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     font-weight: 500;
-    height: 3rem;
+    height: 2.6rem;
     display: flex;
     align-items: center;
     padding: 0 25px;
     margin-top: 30px;
 }
-.discount span{
-    font-size: 1.7rem;
-    font-weight: 700;
-}
-.title{
+
+.discount span {
     font-size: 1.3rem;
     font-weight: 700;
-    color: rgba(0,0,0,0.4);
+    color: #fff;
 }
-.title span{
+
+.title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: rgba(0, 0, 0, 0.3);
+}
+
+.title span {
     color: #000;
 }
-.color__img ul{
+
+.color__img ul {
     gap: 20px;
 }
-.color__img li{
-    width: 120px;
-    height: 120px;
+
+.color__img li {
+    width: 90px;
+    height: 90px;
     border-radius: 10px;
     display: grid;
     place-content: center;
     cursor: pointer;
 }
-.color__img .active{
-    border: 1px solid rgba(0,0,0,0.2);
-    background: rgb(227,227,227);
+
+.color__img .active {
+    border: 1px solid rgba(0, 0, 0, 0.09);
+    background: rgb(227, 227, 227);
 }
-.color__img img{
-    width: 100px;
-    
+
+.color__img img {
+    width: 70px;
+
 }
-button{
-    font-size: 1.2rem;
+
+button {
+    font-size: 1.1rem;
     font-weight: 700;
     color: #fff;
     background: #000;
     border-radius: 30px;
     outline: none;
     border: none;
-    height: 3.5rem;
-    padding: 0 45px;
+    height: 3rem;
+    padding: 0 35px;
     cursor: pointer;
+    transition: .3s ease;
 }
-.product__guarantees ul{
+
+button:active{
+    scale: .9;
+}
+
+.product__guarantees ul {
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-between;
-    margin-top: 30px;
+    margin-top: 20px;
+    gap: 1rem;
 }
-.product__guarantees ul li{
+
+.product__guarantees ul li {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 1rem;
     align-items: center;
     justify-content: space-between;
 }
-.product__guarantees ul li p{
-    font-size: 1.2rem;
+
+.product__guarantees ul li p {
+    font-size: 1rem;
     font-weight: 600;
     color: #000;
     text-align: center;
 }
-.product__guarantees li:nth-child(1) img{
+
+.product__guarantees li:nth-child(1) img {
+    width: 20px;
+}
+
+.product__guarantees li img {
     width: 30px;
 }
-.product__guarantees li img{
-    width: 40px;
+
+
+@media (max-width:1024px) {
+    .product__details-box {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .product__image {
+        padding-top: 150px;
+        padding-bottom: 100px;
+    }
+
+    .product__image,
+    .right__box {
+        width: 100%;
+    }
+
+    .product__details,
+    .product__guarantees {
+        border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+        padding: 20px 20px;
+    }
+}
+
+@media (max-width:700px) {
+    .product__image {
+        padding-top: 100px;
+        padding-bottom: 50px;
+    }
+
+    .product__details {
+        margin-top: 2rem;
+    }
+    .product__details h1{
+        font-size: 1.2rem;
+    }
+    .Product__price .Price{
+        font-size: 1.5rem;
+    }
+    .Product__price .DicPrice{
+        font-size: 1.3rem;
+    }
+    .taxes{
+        font-size: .7rem;
+    }
+
+    .color__img li{
+        width: 70px;
+        height: 70px;
+    }
+    .color__img img{
+        width: 50px;
+    }
+
+}
+
+@media (max-width:420px) {
+    .product__image img {
+        max-width: 250px;
+    }
+
+    .discount {
+        font-size: .9rem;
+        height: 2.5rem;
+    }
+    .discount span {
+        font-size: 1rem;
+    }
+    
+    button {
+        font-size: .9rem;
+        height: 2.5rem;
+        padding: 0 30px;
+        letter-spacing: 1px;
+    }
+
+    .product__guarantees ul li p {
+        font-size: .8rem;
+    }
 }

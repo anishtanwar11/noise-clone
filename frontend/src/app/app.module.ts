@@ -10,6 +10,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HomeComponent } from './components/home/home.component';
 import { ProductListingComponent } from './components/product-listing/product-listing.component';
 import { ProductDetailComponent } from './components/product-detail/product-detail.component';
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations"
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { ProductDetailComponent } from './components/product-detail/product-deta
     BrowserModule,
     AppRoutingModule,
     NgbModule,
-    CommonModule
+    CommonModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

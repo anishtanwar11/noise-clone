@@ -40,3 +40,34 @@
         </li>
     </ul>
 </div>
+
+<div class="home__Product-category">
+    <div class="product__list">
+        <div *ngFor="let productList of homeProducts" class="product__card">
+            <a [routerLink]="['/product', productList.id]">
+                <div class="product__image">
+                    <img src="{{ productList.imgUrl }}" alt="Product img">
+                </div>
+            </a>
+            <div class="product__details">
+                <div class="product__name">
+                    <h2>{{ productList.name }}</h2>
+                    <p>{{ productList.description }}</p>
+                </div>
+                <div class="product__price">
+                    <div class="P">
+                        <p class="price">₹{{ (productList.dicPrice - ((productList.dicPrice * productList.discount) /
+                            100)).toFixed(0) }}</p>
+                        <div class="dic-discount">
+                            <p class="dic__price"><s>₹{{ productList.dicPrice }}</s></p>
+                            <p class="discount">{{ productList.discount }}% OFF</p>
+                        </div>
+                    </div>
+                    <button [routerLink]="['/product', productList.id]">
+                        GRAB NOW
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
