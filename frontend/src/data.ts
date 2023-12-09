@@ -112,7 +112,7 @@ export const sample_products: Product[] = [
         dicPrice: 6999,
         discount: 66,
         colorName: 'Jet Black',
-        imgUrl: '//www.gonoise.com/cdn/shop/files/1.2_fa2cac90-769e-491e-8be2-843e7b4a4441.png?v=1695388527',
+        imgUrl: 'https://www.gonoise.com/cdn/shop/products/Icon2-4.png?v=1681610912',
     },
 
     // SMARTWATCH
