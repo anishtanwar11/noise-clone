@@ -9,8 +9,8 @@
                     <h1>{{ product.name }}</h1>
                     <div>
                         <div class="flex Product__price">
-                            <p class="Price">₹{{ (product.dicPrice - ((product.dicPrice * product.discount) / 100)).toFixed(0) }}</p>
-                            <p class="DicPrice"><s>₹{{ product.dicPrice }}</s></p>
+                            <p class="Price">{{ productPrice() | currency: 'INR': true: '2.0-0' }}</p>
+                            <p class="DicPrice"><s>{{ product.dicPrice | currency: 'INR':true: '2.0-0' }}</s></p>
                         </div>
                         <p class="taxes">Inclusive of all taxes</p>
                     </div>

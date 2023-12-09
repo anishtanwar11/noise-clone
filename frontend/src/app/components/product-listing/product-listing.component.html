@@ -1,31 +1,101 @@
 <section class="Collections">
-    <div class="header"></div>
-    <div class="Container">
-        <h1>List of {{ category }}</h1>
-        <div class="product__list">
-            <div *ngFor="let productList of products" class="product__card">
-                <a [routerLink]="['/product', productList.id]">
-                    <div class="product__image">
-                        <img src="{{ productList.imgUrl }}" alt="Product img">
+
+    <div class="filters small__filetr" *ngIf="!ShowFIlterBox">
+        <h1>Filters:</h1>
+
+        <div class="search-box">
+            <div class="search">
+                <i class="ri-search-2-line"></i>
+                <input type="search" placeholder="search">
+            </div>
+        </div>
+
+        <div class="Product__category">
+            <h2>Sort by</h2>
+            <ul>
+                <!-- <div *ngFor="let prodImg of productImages">{{prodImg.img}}</div> -->
+                <li *ngFor="let prodCategory of Category" [routerLink]="['/collections', prodCategory.name]">
+                    <div class="dot">
+                        <div class=" active"></div>
                     </div>
-                </a>
-                <div class="product__details">
-                    <div class="product__name">
-                        <h2>{{ productList.name }}</h2>
-                        <p>{{ productList.description }}</p>
+                    {{ prodCategory.name }}
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+
+    <div class="filters " *ngIf="ShowFIlterBox && !filterTogel">
+        <h1>Filters:</h1>
+
+        <div class="search-box">
+            <div class="search">
+                <i class="ri-search-2-line"></i>
+                <input type="search" placeholder="search">
+            </div>
+        </div>
+
+        <div class="Product__category">
+            <h2>Sort by</h2>
+            <ul>
+                <!-- <div *ngFor="let prodImg of productImages">{{prodImg.img}}</div> -->
+                <li *ngFor="let prodCategory of Category" [routerLink]="['/collections', prodCategory.name]">
+                    <div class="dot">
+                        <div class=" active"></div>
                     </div>
-                    <div class="product__price">
-                        <div>
-                            <p class="price">₹{{ (productList.dicPrice - ((productList.dicPrice * productList.discount) / 100)).toFixed(0) }}</p>
-                            <p class="dic__price"><s>₹{{ productList.dicPrice }}</s></p>
-                            <p class="discount">{{ productList.discount }}% OFF</p>
+                    {{ prodCategory.name }}
+                </li>
+            </ul>
+        </div>
+
+        <div class="filter__close-buttons">
+            <div>
+            <button (click)="filterToggleButton()">Close</button>
+            <button (click)="filterToggleButton()">Apply</button>
+        </div>
+        </div>
+    </div>
+
+    <div class="right__box-products" >
+        <div class="header"></div>
+        <div class="ContaineR">
+            <h1>{{ category }}</h1>
+            <div class="product__list">
+                <div *ngFor="let productList of products" class="product__card">
+                    <a [routerLink]="['/product', productList.id]">
+                        <div class="product__image">
+                            <img src="{{ productList.imgUrl }}" alt="Product img">
                         </div>
-                        <button [routerLink]="['/product', productList.id]">
-                            VIEW PRODUCT
-                        </button>
+                    </a>
+                    <div class="product__details">
+                        <div class="product__name">
+                            <h2>{{ productList.name }}</h2>
+                            <p>{{ productList.description }}</p>
+                        </div>
+                        <div class="product__price">
+                            <div>
+                                <p class="price">{{ (productList.dicPrice - ((productList.dicPrice *
+                                    productList.discount) / 100)).toFixed(0) | currency: 'INR':true: '2.0-0' }}</p>
+                                <p class="dic__price"><s>{{ productList.dicPrice | currency: 'INR': true: '2.0-0' }}</s>
+                                </p>
+                                <p class="discount">{{ productList.discount }}% OFF</p>
+                            </div>
+                            <button [routerLink]="['/product', productList.id]">
+                                VIEW PRODUCT
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
+
+
+    <div class="filter__button">
+        <button (click)="filterToggleButton()">
+            <i class="ri-filter-2-line"></i>
+            Filter & Sort
+        </button>
     </div>
 </section>

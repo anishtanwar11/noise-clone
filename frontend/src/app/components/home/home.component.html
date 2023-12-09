@@ -56,10 +56,10 @@
                 </div>
                 <div class="product__price">
                     <div class="P">
-                        <p class="price">₹{{ (productList.dicPrice - ((productList.dicPrice * productList.discount) /
-                            100)).toFixed(0) }}</p>
+                        <p class="price">{{ (productList.dicPrice - ((productList.dicPrice * productList.discount) /
+                            100)).toFixed(0) | currency: 'INR': true: '2.0-0'}}</p>
                         <div class="dic-discount">
-                            <p class="dic__price"><s>₹{{ productList.dicPrice }}</s></p>
+                            <p class="dic__price"><s>{{ productList.dicPrice | currency: 'INR': true: '2.0-0'}}</s></p>
                             <p class="discount">{{ productList.discount }}% OFF</p>
                         </div>
                     </div>

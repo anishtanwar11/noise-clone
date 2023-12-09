@@ -29,6 +29,14 @@ a {
     max-width: 1700px;
 }
 
+::-webkit-scrollbar{
+   background: rgba(0, 0, 0, 0.3);
+   width: 5px;
+}
+::-webkit-scrollbar-thumb{
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 25px;
+}
 
 .product__list {
     display: grid;

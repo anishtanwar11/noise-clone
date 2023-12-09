@@ -3,7 +3,6 @@ export class Product {
     category!: string;
     name!: string;
     description!: string;
-    price!: number;
     dicPrice!: number;
     discount!: number;
     imgUrl!: string;

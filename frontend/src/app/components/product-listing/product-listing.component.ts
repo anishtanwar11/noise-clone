@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ProductsService } from 'src/app/services/products.service';
+import { Category } from 'src/app/shared/models/Categories';
 import { Product } from 'src/app/shared/models/Products';
 
 @Component({
@@ -13,6 +14,11 @@ export class ProductListingComponent implements OnInit {
   category: any ='';
   products: Product[] = [];
   productList: any;
+  Category: Category[] = [];
+
+
+  filterTogel = false;
+  ShowFIlterBox = false;
 
   constructor(private route:ActivatedRoute,
               private productService:ProductsService) { }
@@ -26,8 +32,26 @@ export class ProductListingComponent implements OnInit {
       } else {
         this.category = 'Collection Not Fount!';
       }
-    })
+    });
+
     
+    this.Category = this.productService.getCategory();
+
+    this.checkScreenSize();
+  }
+
+  @HostListener('window:resize', ['$event'])
+  onResize(event: Event) {
+    this.checkScreenSize();
+  }
+
+
+  checkScreenSize() {
+    this.filterTogel = window.innerWidth > 970;
+  }
+
+  filterToggleButton() {
+    this.ShowFIlterBox = !this.ShowFIlterBox;
   }
 
 }

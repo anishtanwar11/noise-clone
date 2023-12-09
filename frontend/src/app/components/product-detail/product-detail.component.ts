@@ -27,4 +27,8 @@ export class ProductDetailComponent implements OnInit {
       }
     });
   }
+
+  productPrice() {
+    return this.product.dicPrice - (this.product.dicPrice * this.product.discount / 100);
+  }
 }
