@@ -26,11 +26,18 @@
                 </ul>
             </div>
 
+            <div class="user_links menu" *ngIf="userButton" [@userDropDownMenu]>
+                <ul>
+                    <li class="user-item">Profile</li>
+                    <li class="user-item">Sign Out</li>
+                </ul>
+            </div>
+
             <div class="Nav__links-imp">
                 <ul>
                     <li><i class="ri-search-line"></i></li>
                     <li><i class="ri-shopping-bag-line"></i></li>
-                    <li><i class="ri-user-line"></i></li>
+                    <li (click)="toggleUser()"><i class="ri-user-line"></i></li>
                     <li (click)="toggleButton()"><i class="ri-menu-line"></i></li>
                 </ul>
             </div>

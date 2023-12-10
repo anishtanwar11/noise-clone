@@ -35,7 +35,8 @@ export class ProductsService {
 
   // FOR PRODUCT DETAILS
   getProductById(id: number) {
-    return this.getAll().find(product => product.id === id);
+    console.log(sample_products.find(product => product.id === id));
+    return sample_products.find(product => product.id === id);
   }
 
   //FOR HOME PRODUCTS DETAILS
