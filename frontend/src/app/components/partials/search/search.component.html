@@ -1,0 +1,6 @@
+<div class="search">
+    <i class="ri-search-2-line"></i>
+    <input #s type="search" placeholder="search" 
+     (keyup)="search(s.value)" 
+     [value]="searchTerm"/>
+</div>

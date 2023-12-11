@@ -111,7 +111,7 @@ ul li {
 .user_links .user-heading{
     
     width: inherit;
-    padding: 1rem;
+    padding: 1.5rem;
     height: max-content;
 }
 
@@ -157,7 +157,7 @@ font-size: 1.2rem;
 width: inherit;
 height: 3rem;
 margin: 0 0 0.5rem 0 ;
-padding:0.5rem;
+padding:1.5rem;
 outline: none;
 border-style:none;
 border-top: 2px solid gainsboro;

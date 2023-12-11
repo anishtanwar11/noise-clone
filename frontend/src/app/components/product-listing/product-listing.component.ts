@@ -21,7 +21,13 @@ export class ProductListingComponent implements OnInit {
   ShowFIlterBox = false;
 
   constructor(private route:ActivatedRoute,
-              private productService:ProductsService) { }
+              private productService:ProductsService,
+              activatedRoute:ActivatedRoute) {
+                activatedRoute.params.subscribe((params) => {
+                  if(params.searchTerm)
+                  this.products= this.productService.getProductBySearctTerm(params.searchTerm);
+                })
+               }
 
   ngOnInit(): void {
     this.route.paramMap.subscribe(params => {

@@ -44,5 +44,10 @@ export class ProductsService {
   getHomeProductsById(id: number) {
     return this.getAllHomeProducts().find(product => product.id === id);
   }
+
+
+  getProductBySearctTerm(searchTerm:string) {
+    return this.getAll().filter(products => products.name.toLowerCase().includes(searchTerm.toLowerCase()))
+  }
 }
 

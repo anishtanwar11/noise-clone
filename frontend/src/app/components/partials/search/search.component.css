@@ -1,0 +1,21 @@
+.search{
+    border: 1px solid rgba(0,0,0,0.3);
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    padding: 8px 10px;
+    border-radius: 7px;
+}
+.search input{
+    border: none;
+    outline: none;
+    width: 100%;
+}
+.search i{
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: rgba(0,0,0,0.7);
+}
+.search-box{
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+}

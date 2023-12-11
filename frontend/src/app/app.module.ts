@@ -10,7 +10,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HomeComponent } from './components/home/home.component';
 import { ProductListingComponent } from './components/product-listing/product-listing.component';
 import { ProductDetailComponent } from './components/product-detail/product-detail.component';
-import { BrowserAnimationsModule } from "@angular/platform-browser/animations"
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+import { SearchComponent } from './components/partials/search/search.component'
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations"
     FooterComponent,
     HomeComponent,
     ProductListingComponent,
-    ProductDetailComponent
+    ProductDetailComponent,
+    SearchComponent
   ],
   imports: [
     BrowserModule,
