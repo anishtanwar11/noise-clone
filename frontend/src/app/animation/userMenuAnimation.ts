@@ -2,16 +2,16 @@ import { animate, query, sequence, stagger, style, transition, trigger } from "@
 
 export const userMenuAnimation=trigger("userDropDownMenu",[
     transition(":enter",[
-    style({height:0}),
+    style({right:"-500px"}),
     sequence([
-        animate("200ms",style({height:"180px"}))
+        animate("200ms",style({right:0}))
     ])
     ]),
 
     transition(":leave",[
-        style({height:"180px"}),
+        style({right:0}),
         sequence([
-            animate("200ms",style({height:"0px"}))
+            animate("200ms",style({right:"-500px"}))
         ])
         ]) 
 ]);

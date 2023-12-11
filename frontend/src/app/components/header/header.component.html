@@ -1,4 +1,30 @@
 <section class="Header ">
+    <div class="user_links menu" *ngIf="userButton" [@userDropDownMenu]>
+        <div class="user-links-container">
+        <div class="user-close-button">
+            <i (click)="toggleUser()" class="ri-close-line"></i>
+        </div>
+        <div class="user-heading">
+            <h2>Hello Noisemaker!</h2>
+        </div>
+        <div class="user-options">
+            <ul>
+                <li (click)="toggleSignIn()" [class.border_active]="signInButton">Sign-In</li>
+                <li (click)="toggleSignUp()" [class.border_active]="signUpButton">Sign-Up</li>
+            </ul>
+        </div>
+        <div class="user-info signIn" *ngIf="signInButton">
+            <input type="email" class="user-input" name="user-email" placeholder="Enter your Email">
+            <input type="password" class="user-input" name="user-password" placeholder="Enter your password">
+            <input type="button" class="user-button" value="Sign-In">
+        </div>
+        <div class="user-info signUp" *ngIf="signUpButton">
+            <input type="email" class="user-input" name="user-email" placeholder="Enter your Email">
+            <input type="password" class="user-input" name="user-password" placeholder="Enter your password">
+            <input type="button" class="user-button" value="Sign-Up">
+        </div>
+    </div>
+</div>
     <div class="Navbar">
         <div class="Nav Container ">
             <div class="logo">
@@ -26,12 +52,7 @@
                 </ul>
             </div>
 
-            <div class="user_links menu" *ngIf="userButton" [@userDropDownMenu]>
-                <ul>
-                    <li class="user-item">Profile</li>
-                    <li class="user-item">Sign Out</li>
-                </ul>
-            </div>
+            
 
             <div class="Nav__links-imp">
                 <ul>
