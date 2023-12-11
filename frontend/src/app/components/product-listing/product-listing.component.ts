@@ -23,40 +23,28 @@ export class ProductListingComponent implements OnInit {
   constructor(private route:ActivatedRoute,
               private productService:ProductsService,
               activatedRoute:ActivatedRoute) {
-                this.route.paramMap.subscribe(params => {
-                  const categoryName = params.get('categoryName');
-                  if (categoryName !== null) {
-                    this.category = categoryName;
-                    this.products = this.productService.getProductByCategory(this.category);
-                  } else {
-                    const searchTerm = params.get('searchTerm');
-                    if (searchTerm) {
-                      this.product = this.productService.getProductBySearctTerm(searchTerm);
-                    } else {
-                      this.category = 'Collection Not Found!';
-                    }
+                activatedRoute.params.subscribe((params) => {
+                  if(params.searchTerm){
+                  this.product= this.productService.getProductBySearctTerm(params.searchTerm);
                   }
-            
-                  this.Category = this.productService.getCategory();
-                  this.checkScreenSize();
-                });
+                })
                }
 
   ngOnInit(): void {
-    // this.route.paramMap.subscribe(params => {
-    //   const categoryName = params.get('categoryName');
-    //   if(categoryName !== null) {
-    //     this.category = categoryName;
-    //     this.products = this.productService.getProductByCategory(this.category);
-    //   } else {
-    //     this.category = 'Collection Not Fount!';
-    //   }
-    // });
+    this.route.paramMap.subscribe(params => {
+      const categoryName = params.get('categoryName');
+      if(categoryName !== null) {
+        this.category = categoryName;
+        this.products = this.productService.getProductByCategory(this.category);
+      } else {
+        this.category = 'Collection Not Fount!';
+      }
+    });
 
     
-    // this.Category = this.productService.getCategory();
+    this.Category = this.productService.getCategory();
 
-    // this.checkScreenSize();
+    this.checkScreenSize();
   }
 
   @HostListener('window:resize', ['$event'])
