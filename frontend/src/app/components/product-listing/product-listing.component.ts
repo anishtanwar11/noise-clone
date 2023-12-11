@@ -15,7 +15,7 @@ export class ProductListingComponent implements OnInit {
   products: Product[] = [];
   productList: any;
   Category: Category[] = [];
-
+  product: any ='';
 
   filterTogel = false;
   ShowFIlterBox = false;
@@ -24,8 +24,9 @@ export class ProductListingComponent implements OnInit {
               private productService:ProductsService,
               activatedRoute:ActivatedRoute) {
                 activatedRoute.params.subscribe((params) => {
-                  if(params.searchTerm)
-                  this.products= this.productService.getProductBySearctTerm(params.searchTerm);
+                  if(params.searchTerm){
+                  this.product= this.productService.getProductBySearctTerm(params.searchTerm);
+                  }
                 })
                }
 
