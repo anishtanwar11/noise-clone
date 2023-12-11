@@ -73,43 +73,106 @@ ul li {
 }
 
 .user_links{
-    width: 150px;
-    height: 180px;
+    width: 450px;
+    height: 100%;
+    z-index: 1111;
     display: flex;
-    align-items: flex-start;
-    justify-content:flex-start;
-    background-color: whitesmoke;
+    flex-direction: column;
+    background-color: white;
     color: black;
     position: absolute;
     top: 50px;
-    right: 20px;
+    right: 0px;
     border-radius: 0.7em;
 }
 
-.user_links ul{
- width: inherit;
- height: fit-content;
- padding: 0.5rem;
- margin: 0.5rem;
- 
- display: flex;
- flex-direction: column;
- align-items: center;
- justify-content: center;
- font-family: 'Poppins', sans-serif;
- font-size: 1.1rem;
- font-weight: bold;
- 
+.user-links-container{
+    display: flex;
+    flex-direction: column;
+    width: inherit;
 }
 
-.user_links li{
-    width: fit-content;
-    height:fit-content;
-    color: #000;
-    margin: 0.3rem;
+.user-close-button{
+    width: inherit;
+    height: max-content;
+    display: flex;
+    justify-content: flex-end;
+    
+    border-bottom: 2px solid gainsboro;
+}
+
+.user-close-button i{
+    margin: 0.5rem;
+    font-size: 1.8rem;
+    cursor: pointer;
+}
+
+
+.user_links .user-heading{
+    
+    width: inherit;
+    padding: 1rem;
+    height: max-content;
+}
+
+.user_links .user-options{
+    display: flex;
+    width: inherit;
+    height: max-content; 
     
 }
 
+.user-options ul{
+    display: flex;
+    width: inherit;
+    height: max-content;
+    padding: 0px; 
+}
+
+.user-options li{
+display: flex;
+padding: 0.5rem;
+justify-content: center;
+color: #000;
+width: inherit;
+
+font-size: 1.2rem;
+}
+
+.border_active{
+    border-bottom: 2px solid black;
+}
+
+.user-info{
+    width: inherit;
+    padding-top: 1rem;
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.user-info .user-input{
+width: inherit;
+height: 3rem;
+margin: 0 0 0.5rem 0 ;
+padding:0.5rem;
+outline: none;
+border-style:none;
+border-top: 2px solid gainsboro;
+border-bottom: 2px solid gainsboro;
+}
+
+.user-info .user-button{
+    padding: 1rem 5rem;
+    width: fit-content;
+    outline: none;
+    border-style: none;
+    background-color: white;
+    border-radius: 2rem; 
+    border: 2px solid rgba(0,0,0,.5019607843137255)
+}
 
 @media (max-width:1200px) {
     .logo img {

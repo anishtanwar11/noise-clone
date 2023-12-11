@@ -11,6 +11,8 @@ import {userMenuAnimation} from 'src/app/animation/userMenuAnimation';
 export class HeaderComponent implements OnInit {
   navButton = false;
   userButton=false;
+  signInButton=true;
+  signUpButton=false;
 
   constructor() { 
   }
@@ -25,5 +27,19 @@ export class HeaderComponent implements OnInit {
   toggleUser():void{
     console.log('User Button Clicked');
     this.userButton=!this.userButton;
+  }
+
+  toggleSignIn():void{
+    if (!this.signInButton) {
+      this.signInButton=!this.signInButton;
+      this.signUpButton=!this.signUpButton;
+    }
+  }
+
+  toggleSignUp():void{
+    if (!this.signUpButton) {
+      this.signUpButton=!this.signUpButton;
+      this.signInButton=!this.signInButton;
+    }
   }
 }
