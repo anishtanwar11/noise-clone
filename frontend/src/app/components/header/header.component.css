@@ -74,16 +74,16 @@ ul li {
 
 .user_links{
     width: 450px;
-    height: 100%;
+    bottom: 0;
     z-index: 1111;
     display: flex;
     flex-direction: column;
     background-color: white;
     color: black;
-    position: absolute;
-    top: 50px;
+    position: fixed;
+    top: 3.5rem;
     right: 0px;
-    border-radius: 0.7em;
+   
 }
 
 .user-links-container{
