@@ -37,7 +37,7 @@ export class ProductListingComponent implements OnInit {
         this.category = categoryName;
         this.products = this.productService.getProductByCategory(this.category);
       } else {
-        this.category = 'Collection Not Fount!';
+        this.category = 'Collection Not Found';
       }
     });
 
