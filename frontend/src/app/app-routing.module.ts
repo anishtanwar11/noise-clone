@@ -10,7 +10,11 @@ const routes: Routes = [
   {path:'collections/:categoryName',component:ProductListingComponent},
   {path:'collections/:categoryName,product/:productId',component:ProductDetailComponent},
   {path:'product/:productId',component:ProductDetailComponent},
+<<<<<<< HEAD
   {path:'search/:searchTerm',component:SearchComponent}
+=======
+  {path:'collections/search/:searchTerm',component:ProductListingComponent}
+>>>>>>> 7aed939c6d46de7d07aeb09f43aead3da154b55e
 ];
 
 @NgModule({
