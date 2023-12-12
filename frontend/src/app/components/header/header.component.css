@@ -141,6 +141,7 @@ font-size: 1.2rem;
 
 .border_active{
     border-bottom: 2px solid black;
+    font-weight: bold;
 }
 
 .user-info{
@@ -171,7 +172,12 @@ border-bottom: 2px solid gainsboro;
     border-style: none;
     background-color: white;
     border-radius: 2rem; 
-    border: 2px solid rgba(0,0,0,.5019607843137255)
+    border: 2px solid rgba(0,0,0,.5019607843137255);
+    transition: 0.3s ease;
+}
+
+.user-info .user-button:active{
+    scale: 0.9;
 }
 
 @media (max-width:1200px) {
