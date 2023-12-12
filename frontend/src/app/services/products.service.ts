@@ -46,8 +46,8 @@ export class ProductsService {
   }
 
 
-  getProductBySearctTerm(searchTerm:string) {
-    return this.getAll().filter(product => product.name.toLowerCase().includes(searchTerm.toLowerCase()))
+  getProductBySearctTerm(search:string) {
+    return this.getAll().filter(product => product.name.toLowerCase().includes(search.toLowerCase()))
   }
 }
 
