@@ -26,9 +26,9 @@ export class ProductsService {
 
   // FOR PRODUCT LIST
   getProductByCategory(categoryName: string) {
-    const category = this.getCategory().find(cat => cat.name === categoryName);
+    const category = this.getCategory().find(cat => cat.name.toLowerCase() === categoryName.toLowerCase());
     if(category){
-      return this.getAll().filter(product => product.category === category.name);
+      return this.getAll().filter(product => product.category.toLowerCase() === category.name.toLowerCase());
     }
     return[];
   }
@@ -46,8 +46,8 @@ export class ProductsService {
   }
 
 
-  getProductBySearctTerm(searchTerm:string) {
-    return this.getAll().filter(products => products.name.toLowerCase().includes(searchTerm.toLowerCase()))
+  getProductBySearctTerm(search:string) {
+    return this.getAll().filter(product => product.name.toLowerCase().includes(search.toLowerCase()))
   }
 }
 
