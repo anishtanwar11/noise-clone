@@ -14,17 +14,26 @@ input{
     padding: 0 15px;
     width: 100%;
 }
+input::placeholder{
+    color: #fff;
+    font-size: .9rem;
+}
+
 .search__bar i{
     color: #fff;
     cursor: pointer;
 }
-
+.men-sportshoes-category{
+    width: 100%;
+}
 .container{
     overflow: auto;
     display: grid;
     height: 296px;
     padding: 15px 10px 5px 20px;
     gap: 20px;
+    width: 100%;
+    max-width: 100%;
 }
 .cards{
     display: flex;
