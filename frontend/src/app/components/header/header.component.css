@@ -3,7 +3,7 @@
 }
 
 .log-in ,
-.Nav__links-imp ul li:nth-child(4){
+.Nav__links-imp .hamBurger{
     display: none;
 }
 
@@ -72,6 +72,7 @@ ul li {
     font-weight: 100;
 }
 
+/*=== USER MENU ===*/
 .user_links{
     width: 450px;
     bottom: 0;
@@ -180,6 +181,35 @@ border-bottom: 2px solid gainsboro;
     scale: 0.9;
 }
 
+/*=== SEARCH BOX ===*/
+.search__box{
+    z-index: 1111;
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    left: 25%;
+    width: 100%;
+    max-width: 700px;
+    height: 350px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    overflow: hidden;
+}
+.header__search-box{
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+.search__box i{
+    color: #fff;
+    position: absolute;
+    z-index: 111111;
+    top: 10px;
+    right: 15px;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
 @media (max-width:1200px) {
     .logo img {
         width: 80px;
@@ -237,7 +267,7 @@ border-bottom: 2px solid gainsboro;
     }
 
     .log-in,
-    .Nav__links-imp ul li:nth-child(4) {
+    .Nav__links-imp .hamBurger {
         display: block;
     }
 
@@ -245,5 +275,10 @@ border-bottom: 2px solid gainsboro;
         column-gap: 1rem;
     }
 
+
+    /* USER MENU */
+    .user_links{
+        width: 100%;
+    }
 
 }

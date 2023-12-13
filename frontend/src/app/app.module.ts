@@ -11,7 +11,9 @@ import { HomeComponent } from './components/home/home.component';
 import { ProductListingComponent } from './components/product-listing/product-listing.component';
 import { ProductDetailComponent } from './components/product-detail/product-detail.component';
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
-import { SearchComponent } from './components/partials/search/search.component'
+import { SearchComponent } from './components/partials/search/search.component';
+import { HeaderSearchBoxComponent } from './components/partials/header-search-box/header-search-box.component'
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -22,14 +24,16 @@ import { SearchComponent } from './components/partials/search/search.component'
     HomeComponent,
     ProductListingComponent,
     ProductDetailComponent,
-    SearchComponent
+    SearchComponent,
+    HeaderSearchBoxComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgbModule,
     CommonModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
