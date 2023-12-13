@@ -1,38 +1,50 @@
 <section class="Header ">
+
+    <!--===== USER MENU =====-->
     <div class="user_links menu" *ngIf="userButton" [@userDropDownMenu]>
         <div class="user-links-container">
-        <div class="user-close-button">
-            <i (click)="toggleUser()" class="ri-close-line"></i>
-        </div>
-        <div class="user-heading">
-            <h2>Hello Noisemaker!</h2>
-        </div>
-        <div class="user-options">
-            <ul>
-                <li (click)="toggleSignIn()" [class.border_active]="signInButton">Sign-In</li>
-                <li (click)="toggleSignUp()" [class.border_active]="signUpButton">Sign-Up</li>
-            </ul>
-        </div>
-        <div class="user-info signIn" *ngIf="signInButton">
-            <input type="email" class="user-input" name="user-email" placeholder="Enter your Email">
-            <input type="password" class="user-input" name="user-password" placeholder="Enter your password">
-            <input type="button" class="user-button" value="Sign-In">
-        </div>
-        <div class="user-info signUp" *ngIf="signUpButton">
-            <input type="text" class="user-input" name="user-name" placeholder="Full name" >
-            <input type="email" class="user-input" name="user-email" placeholder="Email">
-            <input type="password" class="user-input" name="user-password" placeholder="Password">
-            <input type="tel" class="user-input" name="user-mobile" placeholder="Phone number">
-            <input type="button" class="user-button" value="Sign-Up">
+            <div class="user-close-button">
+                <i (click)="toggleUser()" class="ri-close-line"></i>
+            </div>
+            <div class="user-heading">
+                <h2>Hello Noisemaker!</h2>
+            </div>
+            <div class="user-options">
+                <ul>
+                    <li (click)="toggleSignIn()" [class.border_active]="signInButton">Sign-In</li>
+                    <li (click)="toggleSignUp()" [class.border_active]="signUpButton">Sign-Up</li>
+                </ul>
+            </div>
+            <div class="user-info signIn" *ngIf="signInButton">
+                <input type="email" class="user-input" name="user-email" placeholder="Enter your Email">
+                <input type="password" class="user-input" name="user-password" placeholder="Enter your password">
+                <input type="button" class="user-button" value="Sign-In">
+            </div>
+            <div class="user-info signUp" *ngIf="signUpButton">
+                <input type="text" class="user-input" name="user-name" placeholder="Full name">
+                <input type="email" class="user-input" name="user-email" placeholder="Email">
+                <input type="password" class="user-input" name="user-password" placeholder="Password">
+                <input type="tel" class="user-input" name="user-mobile" placeholder="Phone number">
+                <input type="button" class="user-button" value="Sign-Up">
+            </div>
         </div>
     </div>
-</div>
+
+    <!--===== SEARCH BOX =====-->
+    <!--  -->
+    <div class="search__box" *ngIf="searchBox">
+        <div class="header__search-box">
+            <app-header-search-box></app-header-search-box>
+            <i (click)="toggleSearchBox()" class="ri-close-line"></i>
+        </div>
+    </div>
+
+
     <div class="Navbar">
         <div class="Nav Container ">
             <div class="logo">
                 <img src="//www.gonoise.com/cdn/shop/files/Group_4_df1f4045-5a8c-4b00-94bb-a6622f06f7da.png?v=1696847023"
-                    alt="noise"
-                    [routerLink]="['']">
+                    alt="noise" [routerLink]="['']">
             </div>
 
             <div class="Nav__links window">
@@ -50,18 +62,22 @@
                     <li class="menu-item">Gift Store</li>
                     <li class="menu-item">Support</li>
                     <li class="menu-item">Blogs</li>
-                    <li class="log-in menu-item"><i class="ri-login-box-line"></i>&nbsp;Login</li>
+                    <li class="log-in menu-item" (click)="toggleUser()"><i class="ri-login-box-line"></i>&nbsp;Login
+                    </li>
                 </ul>
             </div>
 
-            
+
 
             <div class="Nav__links-imp">
                 <ul>
-                    <li><i class="ri-search-line"></i></li>
+                    <li *ngIf="searchButtonDisplay" >
+                        <i (click)="toggleSearchBox()" class="ri-search-line">
+                        </i>
+                    </li>
                     <li><i class="ri-shopping-bag-line"></i></li>
                     <li (click)="toggleUser()"><i class="ri-user-line"></i></li>
-                    <li (click)="toggleButton()"><i class="ri-menu-line"></i></li>
+                    <li (click)="toggleButton()" class="hamBurger"><i class="ri-menu-line"></i></li>
                 </ul>
             </div>
         </div>

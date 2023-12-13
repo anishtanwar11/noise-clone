@@ -13,12 +13,20 @@ export class HeaderComponent implements OnInit {
   userButton=false;
   signInButton=true;
   signUpButton=false;
+  searchBox=false;
+
+  searchButtonDisplay: boolean = true;
 
   constructor() { 
   }
 
   ngOnInit(): void {
   }  
+
+  toggleSearchBox(): void{
+    this.searchBox = !this.searchBox;
+    this.searchButtonDisplay = !this.searchButtonDisplay;
+  }
   
   toggleButton(): void{
     this.navButton = !this.navButton;
@@ -42,4 +50,5 @@ export class HeaderComponent implements OnInit {
       this.signInButton=!this.signInButton;
     }
   }
+
 }

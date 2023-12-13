@@ -1,0 +1,45 @@
+.search__bar{
+    display: flex;
+    align-items: center;
+    width: 100%; 
+    background-color: #000;
+    line-height: 3.3;
+    padding: 0 15px 0 15px; 
+}
+input{
+    background-color: #000;
+    border: none;
+    outline: none;
+    color: #fff;
+    padding: 0 15px;
+    width: 100%;
+}
+.search__bar i{
+    color: #fff;
+    cursor: pointer;
+}
+
+.container{
+    overflow: auto;
+    display: grid;
+    height: 296px;
+    padding: 15px 10px 5px 20px;
+    gap: 20px;
+}
+.cards{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+img{
+    width: 50px;
+}
+h1{
+    font-size: 1rem;
+}
+::-webkit-scrollbar{
+    background-color: #fff;
+}
+::-webkit-scrollbar-thumb{
+    border-radius: 0;
+}
