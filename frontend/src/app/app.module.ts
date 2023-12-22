@@ -14,6 +14,7 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { SearchComponent } from './components/partials/search/search.component';
 import { HeaderSearchBoxComponent } from './components/partials/header-search-box/header-search-box.component'
 import { FormsModule } from '@angular/forms';
+import { CartComponent } from './components/cart/cart.component';
 
 
 @NgModule({
@@ -26,6 +27,7 @@ import { FormsModule } from '@angular/forms';
     ProductDetailComponent,
     SearchComponent,
     HeaderSearchBoxComponent,
+    CartComponent,
   ],
   imports: [
     BrowserModule,

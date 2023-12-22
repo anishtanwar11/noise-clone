@@ -14,6 +14,7 @@ export class HeaderComponent implements OnInit {
   signInButton=true;
   signUpButton=false;
   searchBox=false;
+  cartBox=false;
 
   searchButtonDisplay: boolean = true;
 
@@ -23,7 +24,7 @@ export class HeaderComponent implements OnInit {
   ngOnInit(): void {
   }  
 
-  toggleSearchBox(): void{
+  toggleSearch(): void{
     this.searchBox = !this.searchBox;
     this.searchButtonDisplay = !this.searchButtonDisplay;
   }
@@ -51,4 +52,7 @@ export class HeaderComponent implements OnInit {
     }
   }
 
+  toggleCart(){
+    this.cartBox = !this.cartBox;
+  }
 }

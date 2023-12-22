@@ -31,11 +31,22 @@
     </div>
 
     <!--===== SEARCH BOX =====-->
-    <!--  -->
     <div class="search__box" *ngIf="searchBox">
         <div class="header__search-box">
             <app-header-search-box></app-header-search-box>
-            <i (click)="toggleSearchBox()" class="ri-close-line"></i>
+            <i (click)="toggleSearch()" class="ri-close-line "></i>
+        </div>
+    </div>
+
+    <!--===== CART BOX =====-->
+    <div class="cart__box" *ngIf="cartBox" [@userDropDownMenu]>
+        <div class="header__cart-box">
+            <div class="user-close-button">
+                <i (click)="toggleCart()" class="ri-close-line"></i>
+            </div>
+        </div>
+        <div class="cart__component">
+            <app-cart></app-cart>
         </div>
     </div>
 
@@ -71,13 +82,18 @@
 
             <div class="Nav__links-imp">
                 <ul>
-                    <li *ngIf="searchButtonDisplay" >
-                        <i (click)="toggleSearchBox()" class="ri-search-line">
-                        </i>
+                    <li *ngIf="searchButtonDisplay" (click)="toggleSearch()">
+                        <i class="ri-search-line"></i>
                     </li>
-                    <li><i class="ri-shopping-bag-line"></i></li>
-                    <li (click)="toggleUser()"><i class="ri-user-line"></i></li>
-                    <li (click)="toggleButton()" class="hamBurger"><i class="ri-menu-line"></i></li>
+                    <li (click)="toggleCart()">
+                        <i class="ri-shopping-bag-line"></i>
+                    </li>
+                    <li (click)="toggleUser()">
+                        <i class="ri-user-line"></i>
+                    </li>
+                    <li (click)="toggleButton()" class="hamBurger">
+                        <i class="ri-menu-line"></i>
+                    </li>
                 </ul>
             </div>
         </div>

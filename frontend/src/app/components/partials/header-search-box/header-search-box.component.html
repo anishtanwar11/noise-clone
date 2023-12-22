@@ -11,7 +11,7 @@
         <div class="container">
             <div class="row-boxes" *ngFor="let product of filteredProducts">
                 <div class="products-container">
-                    <div class="cards">
+                    <div class="cards" [routerLink]="['/product', product.id]">
                         <img src="{{ product.imgUrl }}" />
                         <h1>{{ product.name }}</h1>
                     </div>

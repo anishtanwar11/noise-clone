@@ -73,7 +73,8 @@ ul li {
 }
 
 /*=== USER MENU ===*/
-.user_links{
+.user_links,
+.cart__box{
     width: 450px;
     bottom: 0;
     z-index: 1111;
@@ -86,14 +87,19 @@ ul li {
     right: 0px;
    
 }
-
-.user-links-container{
+.cart__box{
+    width: 100%;
+    max-width: 50%;
+}
+.user-links-container,
+.header__cart-box{
     display: flex;
     flex-direction: column;
     width: inherit;
 }
 
-.user-close-button{
+.user-close-button,
+.cart_close{
     width: inherit;
     height: max-content;
     display: flex;
@@ -210,6 +216,15 @@ border-bottom: 2px solid gainsboro;
     right: 15px;
     font-size: 1.5rem;
     cursor: pointer;
+}
+
+/*===== CART SECTION =====*/
+.cart__component{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
 }
 
 @media (max-width:1200px) {
